@@ -21,3 +21,6 @@ map <C-X> :NERDTreeToggle<CR>
 map <C-\> :cnext<CR>
 map <C-]> :cprevious<CR>
 map <C-=> :copen<CR>
+function Patch()
+  bufdo !tar -rvf archive.tar %
+endfunction
