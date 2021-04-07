@@ -21,6 +21,12 @@ map <C-X> :NERDTreeToggle<CR>
 map <C-\> :cnext<CR>
 map <C-]> :cprevious<CR>
 map <C-=> :copen<CR>
+
 function Patch()
   bufdo !tar -rvf archive.tar %
+endfunction
+
+function Json()
+  %s/^\(\s*\)\(\w\)/\1'\2/g
+  %s/'\(\w*\):/'\1':/g
 endfunction
