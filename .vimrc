@@ -23,7 +23,7 @@ map <C-]> :cprevious<CR>
 map <C-=> :copen<CR>
 
 function Patch()
-  bufdo !tar -rvf archive.tar %
+  bufdo !tar -rvf patch.tar %
 endfunction
 
 function Json()
