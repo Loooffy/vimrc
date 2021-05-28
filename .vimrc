@@ -22,6 +22,10 @@ map <C-\> :cnext<CR>
 map <C-]> :cprevious<CR>
 map <C-=> :copen<CR>
 
+syntax on
+set t_Co=256
+colorscheme nova
+
 function Patch()
   bufdo !tar -rvf patch.tar %
 endfunction
