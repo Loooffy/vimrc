@@ -21,10 +21,16 @@ map <C-X> :NERDTreeToggle<CR>
 map <C-\> :cnext<CR>
 map <C-]> :cprevious<CR>
 map <C-=> :copen<CR>
+map <C-N> :call Nu()<CR>
 
 syntax on
 set t_Co=256
 colorscheme nova
+
+function Nu()
+    set nu!
+    set rnu!
+endfunction
 
 function Patch()
   bufdo !tar -rvf patch.tar %
@@ -34,3 +40,13 @@ function Json()
   %s/^\(\s*\)\(\w\)/\1'\2/g
   %s/'\(\w*\):/'\1':/g
 endfunction
+
+let s:clip = '/mnt/c/Windows/System32/clip.exe'
+if executable(s:clip)
+    augroup WSLYank
+        autocmd!
+        autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' | '.s:clip)
+    augroup END
+end
+
+noremap "+p :exe 'norm a'.system('/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -Command Get-Clipboard')<CR>
