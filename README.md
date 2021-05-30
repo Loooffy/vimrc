@@ -4,6 +4,7 @@ prerequisite: [NERDtree](https://github.com/preservim/nerdtree) installed
 
 # theme
 
+put nova.vim in ~/.vim/colors
 reference: [colorswat.ch](https://colorswat.ch/vim)
 
 # clipboard
