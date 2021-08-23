@@ -2,6 +2,10 @@
 
 - prerequisite: [NERDtree](https://github.com/preservim/nerdtree) installed
 
+# plugins
+
+- live linter in vim: [ALE](https://github.com/dense-analysis/ale#installation) (linters for different languages should be installed first)
+
 # theme
 
 - put nova.vim in ~/.vim/colors
