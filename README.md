@@ -4,7 +4,8 @@
 
 # plugins
 
-- live linter in vim: [ALE](https://github.com/dense-analysis/ale#installation) (linters for different languages should be installed first)
+- live linter in vim: [ALE](https://github.com/dense-analysis/ale#installation) (linters for different languages should be installed first)  
+  note: cursor hidden issue fixed by `sudo apt remove vim-gtk vim-gui-common` source[this post](https://github.com/dense-analysis/ale/issues/1536#issuecomment-398685748)
 
 # theme
 
